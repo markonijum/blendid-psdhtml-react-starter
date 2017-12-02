@@ -1,0 +1,59 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// @import "compass/reset";
+// @import "compass";
+@import "vendor/susy";
+@import "custom_mixins/mixins";
+@import "vendor/reset";
+@import "normalize.css/normalize";
+@import "font-awesome/scss/font-awesome";
+
+// ENABLE ANIMATE CSS FUNCTINALITY
+// @import "animate.css/animate";
+
+//ENABLE RESPONSIVE NAV
+// @import "vendor/responsive-nva;
+
+/* ==========================================================================
+   Custom Styles
+   ========================================================================== */
+
+$susy: ( columns: 12,
+gutters: 1/4,
+math: fluid,
+output: float,
+gutter-position: outside,
+);
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.clearfix {
+    @include clearfix;
+}
+
+/* ==========================================================================
+   Sprite classes
+   ========================================================================== */
+
+//    @import "sprites/sprite";
+
+
+/* ==========================================================================
+   Flexbox classes
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Custom styles -- your styles put here
+   ========================================================================== */
+
