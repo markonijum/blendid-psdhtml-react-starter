@@ -5,55 +5,28 @@
 
 // @import "compass/reset";
 // @import "compass";
-@import "vendor/susy";
-@import "custom_mixins/mixins";
-@import "vendor/reset";
-@import "normalize.css/normalize";
-@import "font-awesome/scss/font-awesome";
+// @import "./vendor/susy";
+// @import "custom_mixins/mixins";
+// @import "vendor/reset";
+// @import "normalize.css/normalize";
+// @import "font-awesome/scss/font-awesome";
+
+//FOUNDATION
+// @import "foundation";
+// @include foundation-xy-grid-classes;
+
+//BOOTSTRAP
+//@import 'bootstrap'
 
 // ENABLE ANIMATE CSS FUNCTINALITY
 // @import "animate.css/animate";
 
 //ENABLE RESPONSIVE NAV
-// @import "vendor/responsive-nva;
-
-/* ==========================================================================
-   Custom Styles
-   ========================================================================== */
-
-$susy: ( columns: 12,
-gutters: 1/4,
-math: fluid,
-output: float,
-gutter-position: outside,
-);
-
-html {
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-.clearfix {
-    @include clearfix;
-}
-
-/* ==========================================================================
-   Sprite classes
-   ========================================================================== */
-
-//    @import "sprites/sprite";
+// @import "vendor/responsive-nav;
 
 
-/* ==========================================================================
-   Flexbox classes
-   ========================================================================== */
 
 
-/* ==========================================================================
-   Custom styles -- your styles put here
-   ========================================================================== */
+
+
 

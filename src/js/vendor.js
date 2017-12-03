@@ -1,3 +1,3 @@
-import './modules/modernizr';
+// import './modules/modernizr';
 import 'lazysizes';
 import 'picturefill';

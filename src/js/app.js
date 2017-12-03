@@ -1,4 +1,6 @@
-
+// import $ from 'jquery';
+// window.$ = $;
+// import 'bootstrap-sass'; 
 // var ResponsiveNav = require('./modules/ResponsiveNav');
 // var SmoothScroll = require('./modules/SmoothScroll');
 // var wow = require('wowjs');

@@ -21,20 +21,7 @@ module.exports = {
       },
       babel: {
         presets: [["es2015", { "modules": false }], 'stage-1', "react"]
-      },
-      loaders: [
-        {
-          test: /\.scss$/,
-          loader: 'style!css!sass'
-        },
-        {
-          test: /\.css$/,
-          use: [
-            'to-string-loader',
-            'css-loader'
-          ]
-       }
-      ]
+      }
     },
   
     browserSync: {
@@ -42,6 +29,18 @@ module.exports = {
         // should match `dest` in
         // path-config.json
         baseDir: 'public'
+      }
+    },
+    
+    stylesheets: {
+      sass: {
+        includePaths:[
+          "./node_modules",
+          "./node_modules/bootstrap-sass/assets/stylesheets",
+          "./node_modules/bulma",
+          "./node_modules/foundation-sites/scss"
+
+        ]
       }
     },
 
@@ -67,29 +66,6 @@ module.exports = {
     },
     production: {
       rev:true
-    },
-
-    additionalTasks: {
-      initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
-
-        this.development.prebuild = (this.development.prebuild != undefined && this.development.prebuild.length > 0) ? this.development.prebuild : undefined;
-        this.development.postbuild = (this.development.postbuild.length != undefined && this.development.postbuild.length > 0) ? this.development.postbuild : undefined;
-
-        this.production.prebuild = (this.production.prebuild != undefined && this.production.prebuild.length > 0) ? this.production.prebuild : undefined;
-        this.production.postbuild = (this.production.postbuild.length != undefined && this.production.postbuild.length > 0) ? this.production.postbuild : undefined;
-
-        require('../gulpfile/tasks/modernizr');
-        require('../gulpfile/tasks/watchScss');
-
-      },
-      development: {
-        prebuild: ['modernizr'],
-        postbuild: ['watchScss']
-      },
-      production: {
-        prebuild: [],
-        postbuild: []
-      }
     },
     
     imgsForSprite: {
